@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parentDiv {
+            width: 500px;
+            box-shadow: 0 0 30px black;
+            margin: 150px auto;
+            padding: 30px;
+            color: white;
+            background-color: rgba(180, 170, 157, 0.151);
+        }
+
+        p {
+            text-align: center;
+        }
+
+        #pp {
+            text-align: center;
+        }
+
+        body {
+            background-image: url("https://i.pinimg.com/originals/f3/94/bb/f394bbd7711d11d289eee99f587bc020.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        function fnMorning() {
+            var pRef = document.getElementById("p1");
+
+            pRef.innerText = "Good Morning";
+            pRef.style.color = "cyan";
+
+        }
+        function fnEvening() {
+            var pRef = document.getElementById("p1");
+
+            pRef.innerText = "Good Evening";
+            pRef.style.color = "red";
+
+        }
+        function fnNight() {
+            var pRef = document.getElementById("p1");
+
+            pRef.innerText = "Good Night";
+            pRef.style.color = "yellow";
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="parentDiv">
+            <div>
+                <p id="p1">Hello Priyal</p>
+            </div>
+            <div id="pp">
+                <button onclick="fnMorning()">Good Morning</button>
+                <button onclick="fnEvening()">Good Evening</button>
+                <button onclick="fnNight()">Good Night</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
