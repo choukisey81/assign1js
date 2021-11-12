@@ -4,43 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>assignment</title>
-    <link rel="stylesheet" href="./index1.css">
+    <title>JS</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .background{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(0deg,rgb(126, 10, 35),#a4fce2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .center{
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            border: 0px;
+            background-color: #faeaea;
+            text-align: center;
+            margin: 20px;
+            width: 250px;
+            height: 40px;
+            font-size: large;
+            box-shadow: 0px 0px 5px #808080;
+        }
+        button{
+            box-shadow: 0px 0px 5px #808080;
+            border: 0px;
+            text-align: center;
+            margin: 20px;
+            width: 200px;
+            height: 40px;
+            font-size: large;
+        }
+        button:hover{
+            background-color: #a52a2a;
+            text-align: center;
+            margin: 20px;
+            width: 200px;
+            height: 40px;
+            font-size: large;
+        }
+    </style>
+    <script>
+        function clicked(id){
+            var inputbox=document.getElementById('box')
+            inputbox.value=0
+        }
+     function attempt(id){
+            var a=document.getElementById('box').value
+            var box=document.getElementById('box')
+            var b=parseInt(a)                     
+            b=b+1
+            box.value=b
+            
+        }
+        function sub(id){
+            var a=document.getElementById('box').value
+            var box=document.getElementById('box')
+            var b=parseInt(a)                      
+            b=b-1
+            box.value=b
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1 style="margin:10px ;">Question 1</h1>
-        <div class="cylinder">
-            <div id='align_cyl'>
-                <input type="number" id="radius" placeholder="Enter Radius">
-                <input type="number" id="height" placeholder="Enter Height">
-                <input id='volume' placeholder="Your Answer" disabled>
-                <button onclick="volume_cyl();">Calculate volume</button>
-                <button onclick="surface_cyl();">Calculate Surface area</button>
-            </div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Circular_cylinder_rh.svg/180px-Circular_cylinder_rh.svg.png" width="300px" height="100%" />
-        </div>
-        <h1 style="margin:10px ;">Question 2</h1>
-        <div class="power">
-            <div id='align_power'>
-                <input id="current" placeholder="current" type="number">
-                <input id="voltage" placeholder="voltage" type="number">
-                <input id='power' placeholder="power" disabled>
-                <button onclick="power_calc();">Calculate power</button>
-            </div>
-            <img src="https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_960,f_auto/Triangle_Equilateral_sxvxkn.jpg" width="300px" height="100%" />
-        </div>
-        <h1 style="margin:10px ;">Question 3</h1>
-        <div class="bucket">
-            <div id="bucket_inp">
-                <input type="number" id='bucket_area' placeholder="Enter area covered in one bucket">
-                <input type="number" id="wall_width" placeholder="Enter width of wall">
-                <input type="number" id="wall_height" placeholder="Enter height of wall">
-                <input id="answer_bucket" placeholder="Number of bucket required" disabled>
-                <button onclick="wall();">Calculate number of bucket required</button>
-            </div>
+    <div class="background">
+        <h1>
+            Addition and Subtraction
+        </h1>
+        <div class="center">
+            <input type='text' id='box' value="0" disabled/>
+            <button id="reset" onclick="sub('reset')">-</button>
+            <button id='one' onclick=" clicked('one') ">Reset</button>
+            <button id='add' onclick=" attempt('add') ">+</button>
         </div>
     </div>
-    <script src="./questions.js"></script>
 </body>
 </html>
