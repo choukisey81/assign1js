@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="6dec.css">
+</head>
+<body>
+    <div>
+    <div class="form-container">
+        <h2>Admission Form for Geekster</h2>
+        <hr><hr>
+    <form>
+        <h3>Personal Info</h3>
+        <input type="text" class="inline" name="f_name" placeholder="First Name" autocomplete="off" required/>
+        <input type="text"class="inline" name="l_name" placeholder="Last Name" /><br>
+        <input type="email" class="inline"name="mail" placeholder="Email Id" required />
+        <input type="number" class="inline"name="phone" placeholder="Phone Number" required /><br>
+        <input type="date"class="inline" name="date_of_Birth" max="2022-01-01" />
+        <select name="gender"class="inline">
+            <option selected disabled>Select gender</option>
+            <option>male</option>
+            <option>Female</option>
+            <option>other</option>
+
+        </select>
+        
+        <textarea name="address" placeholder="Address"></textarea>
+        <h3>Educational Info</h3>
+        <select name="degree">
+            <option selected disabled>Select Degree</option>
+            <optgroup label="Bachelors">
+               <option>BE</option>
+               <option>B.tech</option>
+               <option>BSC</option>
+               <optgroup label="Masters">
+                <option>Mfarma</option>
+                <option>M.Tech</option>
+                <option>MSC</option>
+            </optgroup>
+        </select>
+        <input type="text" name="college" placeholder="College Name">
+        <input type="number" name="passing year" placeholder="Year of Passing" min="2010" max="2022">
+        <input type="number" name="percentage" placeholder="Percentage" min="0" max="100" step="10" />
+        <input type="file" />
+        <h3>Course Detais</h3>
+        <input type="radio" class="inline" name="Course type">Advance
+        <input type="radio"  class="inline" name="Course type">Fundamentals <br>
+        <input type="checkbox" class="inline" name="Course type">DSA
+        <input type="checkbox"  class="inline" name="Course type">Web <br>
+        <input type="submit" class="inline" value="Apply for Admission" />
+        <input type="reset" class="inline" />
+    </form>
+</div>
+</div>
+</body>
+</html>
